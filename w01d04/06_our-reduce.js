@@ -8,7 +8,7 @@
 
 // console.log('total', total);
 
-// const reducedTotal = nums.reduce((acc, cur) => {
+// const reducedTotal = nums.reduce((prevValue, currValue) => {
 //   return prevValue + currValue;
 // }, 0);
 
