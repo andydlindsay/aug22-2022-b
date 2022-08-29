@@ -16,7 +16,23 @@
  *    0
  */
 const min = function(arr) {
+  // return Math.min(...arr);
 
+  // set up a variable to hold our lowest seen so far
+  // let lowestValue = Infinity;
+  let lowestValue = arr[0];
+
+  // loop through the provided arr
+  arr.forEach((num) => {
+    // is the current element less than our lowest?
+    if (num < lowestValue) {
+      // if yes, replace our lowest with the current element
+      lowestValue = num;
+    }
+  });
+
+  // return the lowest number seen
+  return lowestValue;
 };
 
 
@@ -32,7 +48,22 @@ const min = function(arr) {
  *    9
  */
 const max = function(arr) {
+  // return Math.max(...arr);
 
+  // create a variable to hold highest seen so far
+  let highestValue = arr[0];
+
+  // loop through the provided arr
+  arr.forEach((num) => {
+    // is the current element higher than our highest value
+    if (num > highestValue) {
+      // if yes, replace highest value with current element
+      highestValue = num;
+    }
+  });
+
+  // return highest value
+  return highestValue;
 };
 
 /* ===========================================================================
@@ -47,7 +78,10 @@ const max = function(arr) {
  *    9
  */
 const range = function(arr) {
+  const highest = max(arr);
+  const lowest = min(arr);
 
+  return highest - lowest;
 };
 
 // Don't change below:

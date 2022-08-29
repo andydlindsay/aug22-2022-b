@@ -23,9 +23,40 @@ const round = function(number) {
  *    4
  */
 
+// 6,2,3,4,9,7
+// 0 1 2 3 4 5
+
+6
+2/3
+
+// 5 / 2 = 2.5 = 2
+// 2
+
 const median = function(arr) {
+  // sort the array
+  arr.sort();
+
+  // calculate the middle index
+  const middleIndex = Math.floor(arr.length / 2);
+  const leftIndex = middleIndex - 1;
+
+  if (arr.length % 2 === 0) {
+    // even length array
+    const valOne = arr[middleIndex];
+    const valTwo = arr[leftIndex];
+
+    const avg = (valOne + valTwo) / 2;
+
+    return round(avg);
+  } else {
+    // odd length array
+    return arr[middleIndex];
+  }
 
 };
+
+// PEDMAS
+// BEDMAS
 
 // Don't change below:
 module.exports = { median };

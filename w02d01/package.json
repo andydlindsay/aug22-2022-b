@@ -1,0 +1,24 @@
+{
+  "name": "w02d01",
+  "version": "1.0.0",
+  "description": "Lecture notes and example code for testing lecture",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "list": "ls -lA",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "testing",
+    "tdd",
+    "mocha",
+    "chai",
+    "fun"
+  ],
+  "author": "Aug22 2022 cohort",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
