@@ -2,7 +2,7 @@
 
 /* Question 01
 
-Build a function called keyMatcher() which, when passed two objects and a string, will use the string to look up the key-value pair in each object and compare the values. If the two values are explicitly equal to each other, return true, otherwise return false if either the values or not the same, or both objects do not have that key.
+Build a function called keyMatcher() which, when passed two objects and a string, will use the string to look up the key-value pair in each object and compare the values. If the two values are explicitly equal to each other, return true, otherwise return false if either the values are not the same, .
 
 Examples:
 
@@ -14,7 +14,18 @@ Examples:
 */
 
 const keyMatcher = function(firstObj, secondObj, key) {
-  
+  // const firstVal = firstObj[key];
+  // const secondVal = secondObj[key];
+
+  // return firstVal === secondVal;
+
+  return firstObj[key] === secondObj[key];
+
+  // if (firstVal === secondVal) {
+  //   return true;
+  // }
+
+  // return false;
 };
 
 // Don't change below:
