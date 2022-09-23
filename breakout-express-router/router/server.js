@@ -7,6 +7,16 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(morgan('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+// require the routers
+const productRouter = require('./routers/product-router');
+const blogpostRouter = require('./routers/blogpost-router');
+
+// use the routers
+app.use('/api/admin/products', productRouter);
+app.use('/blogposts', blogpostRouter);
 
 app.listen(port, () => {
   console.log(`app listening on port ${port}`);
