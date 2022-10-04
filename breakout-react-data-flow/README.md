@@ -39,19 +39,22 @@
       * TweetBody
       * TweetFooter
 
+### Demo: State Update Helper function
 ```js
 // inside App
 const [products, setProducts] = useState([]);
-const newProduct = (newProduct) => {
+
+// create a helper that is responsible for updating state
+const createProduct = (newProduct) => {
   $.post('/products', {newProduct})
     .then(() => {
       setProducts([...products, newProduct]);
     });
 };
 
-// render the Products component <Product />
-Products({ products, newProduct });
+// render the Products component <Product /> and pass down our helper function
+Products({ products, createProduct });
 
-// inside Products
-props.newProduct(product)
+// inside Products, call the helper function with our new product data
+props.createProduct(newProduct);
 ```
