@@ -9,6 +9,10 @@
 * props - data from outside the component
 * state - data that belongs to a component
 
+### Prop Drilling
+* props pass through a component that doesn't use them (eg. a prop is passed from grandparent to grandchild, but needs to go through the parent)
+
+### Example Data Flow
 * App - store the `products`
   * Home - props `products`
   * About
@@ -22,7 +26,8 @@
 * TweetForm - tweet creation component
 * ErrorMessage - display error message
 
-App - state user info, tweets info, helpers to update state `createTweet`
+### Tweeter Data Flow
+* App - state user info, tweets info, helpers to update state `createTweet`
   * Navbar - props (user)
   * UserAvatar - props (user)
   * TweetForm - props (user), state (newTweet) props.createTweet(tweet)
@@ -34,30 +39,19 @@ App - state user info, tweets info, helpers to update state `createTweet`
       * TweetBody
       * TweetFooter
 
-
-prop drilling - props pass through a component that doesn't use them
-
-
-
-getInterviewersForDay(state, state.day); => [interviewers]
-
-day
-days
-interviewers
-appointments
-
-
-inside App
+```js
+// inside App
+const [products, setProducts] = useState([]);
 const newProduct = (newProduct) => {
   $.post('/products', {newProduct})
     .then(() => {
       setProducts([...products, newProduct]);
     });
 };
-Products({ products, newProduct })
 
-inside Products
+// render the Products component <Product />
+Products({ products, newProduct });
+
+// inside Products
 props.newProduct(product)
-
-
-
+```
