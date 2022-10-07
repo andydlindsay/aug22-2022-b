@@ -9,14 +9,16 @@ const useRequest = (url) => {
   });
 
   useEffect(() => {
-    setState({ ...state, loading: true });
+    setState((prev) => ({ ...prev, loading: true }));
     axios.get(url)
       .then(result => {
-        setState({
-          data: result.data,
-          loading: false,
-          errorMsg: ''
-        });
+        setTimeout(() => {
+          setState({
+            data: result.data,
+            loading: false,
+            errorMsg: ''
+          });
+        }, 2000);
       })
       .catch(() => {
         setState((prev) => ({
