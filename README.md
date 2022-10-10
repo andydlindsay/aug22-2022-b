@@ -14,3 +14,4 @@
 * [BREAKOUT - React Data Flow](/breakout-react-data-flow//)
 * [W07D05 - Custom Hooks](/w07d05)
 * [W08D01 - Bootcamp Review](/w08d01)
+* [BREAKOUT - useVisualMode](/breakout-usevisualmode)
