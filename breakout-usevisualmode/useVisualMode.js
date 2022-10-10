@@ -28,10 +28,7 @@ const useVisualMode = (initialMode) => {
   const transition = (newView, replace = false) => {
     if (replace) {
       // we want the history to stay the same length, just replace the last index
-      // const copy = history.slice(0, history.length - 1);
-      // copy.push(newView);
-
-      setHistory((prev) => {
+      return setHistory((prev) => {
         const copy = [
           ...prev.slice(0, prev.length - 1),
           newView
