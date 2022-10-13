@@ -15,3 +15,4 @@
 * [W07D05 - Custom Hooks](/w07d05)
 * [W08D01 - Bootcamp Review](/w08d01)
 * [BREAKOUT - useVisualMode](/breakout-usevisualmode)
+* [W08D05 - Intro to Ruby](/w08d05)
